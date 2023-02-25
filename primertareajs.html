@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        
+        let metros=500;
+        let transporte='';
+        
+        switch(true){
+            case metros > 0 && metros <= 1000:transporte='caminata';
+            break;
+            case metros > 1000 && metros <= 10000:transporte='bicicleta';
+            break;
+            case metros > 10000 && metros <= 30000:transporte='colectivo';
+            break;
+            case metros > 10000 && metros <= 100000:transporte='auto' ;
+            break;
+            case metros > 100000:transporte='avion';
+            break;
+        }
+        
+        if(isNaN(metros) || metros <= 0){
+            document.write('ingrese un valor valido');
+        }
+        else{
+            document.write(`el metodo de transporte que recomendamos para ${metros} metros es ${transporte}`);
+        }
+        
+
+    </script>
+</body>
+
+</html>
